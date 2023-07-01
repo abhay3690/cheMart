@@ -1,3 +1,3 @@
-<%@page import="Students"%><%
+<%@page import="cheMart.Students"%><%
 	String strJSON = new Students().getStudents();
 %><%=strJSON%>

@@ -1,3 +1,4 @@
+package cheMart;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +10,7 @@ public class DBConnection {
 		Connection con = null;
 		try{  
 			Class.forName("com.mysql.cj.jdbc.Driver");  
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/eSchool","root","Abhay@3690");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/eSchool","root","Parthiv@8960");
 		}catch (ClassNotFoundException e) {
 			//e.printStackTrace();
 			System.out.println("Not able find required Driver!");

@@ -2,7 +2,7 @@
 	function loadStudents(){
 		$.ajax({
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-			url: "/eSchool/jsp/students/getStudentsList.jsp",
+			url: "/cheMart/jsp/students/getStudentsList.jsp",
 			type: "GET",
 			dataType: "text",
 			async: false,
