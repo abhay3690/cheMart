@@ -1,4 +1,11 @@
-
+build
 .classpath
-.settings/org.eclipse.wst.common.component
+.settings
 .settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.eclipse.wst.common.component
+cheMart/.DS_Store
+cheMart/build/.DS_Store
+cheMart/src/.DS_Store
+cheMart/src/cheMart/.DS_Store
+*.component
+.DS_Store
