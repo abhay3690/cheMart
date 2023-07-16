@@ -7,9 +7,6 @@ create table product(
     deleteFlag tinyint(1) not null default 0
 );
 
-insert into product(name,price,companyName,quantity) values('HCL',120,'HCL Pharma',500),
-('Methyl Benzine',80,'HCL Pharma',100);
-
 create table orders(
 	id int(11) auto_increment primary key,
     productId int(11),
@@ -20,3 +17,11 @@ create table orders(
     deliveredDate datetime,
 	deleteFlag tinyint(1) not null default 0
 );
+
+alter table product add category varchar(100);
+alter table product add shortDesc varchar(255) not null default '';
+alter table product add longDesc text ;
+alter table product add image blob;
+
+insert into product(name,price,companyName,quantity) values('HCL',120,'HCL Pharma',500),
+('Methyl Benzine',80,'HCL Pharma',100);

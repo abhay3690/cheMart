@@ -18,6 +18,7 @@ function openTab(tab){
 		}
 	});
 	if(tab === 'index'){
+		$("#currentTab").text("home");
 		$("#main-content").addClass("dashboard");
 		loadProducts();
 	}else
