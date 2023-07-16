@@ -1,4 +1,4 @@
-package cheMart;
+package utils;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -38,8 +38,4 @@ public class Students {
 		return String.valueOf(oJsonArray);
 	}
 	
-	public static void main(String[] args) {
-		Students student = new Students();
-		System.out.println(student.getStudents());
-	}
 }
