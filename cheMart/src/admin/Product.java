@@ -23,15 +23,10 @@ public class Product {
 			while(oRs.next()) {
 				jsonObj = new JSONObject();
 				jsonObj.put("id", oRs.getInt("id")) ;
-				jsonObj.put("enrollment", oRs.getInt("enrollmentNo"));
-				jsonObj.put("fname",oRs.getString("fname"));
-				jsonObj.put("lname",oRs.getString("lname"));
-				jsonObj.put("dob",oRs.getString("dob"));
-				jsonObj.put("gender",oRs.getString("gender"));
-				jsonObj.put("mobileno",oRs.getString("mobileno"));
-				jsonObj.put("address",oRs.getString("address"));
-				jsonObj.put("city",oRs.getString("city"));
-				jsonObj.put("state",oRs.getString("state"));
+				jsonObj.put("name",oRs.getString("name"));
+				jsonObj.put("price",oRs.getDouble("price"));
+				jsonObj.put("companyName",oRs.getString("companyName"));
+				jsonObj.put("quantity",oRs.getInt("quantity"));			
 				oJsonArray.put(jsonObj);
 			}
 		}catch(Exception ex) {
