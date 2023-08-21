@@ -1,0 +1,71 @@
+<div class="container">
+	<main id="main-container">
+		<div class="account-page">
+			<div class="profile">
+				<div class="profile-img">
+					<img src="img/product/img5.jpg">
+					<h2>John Doe</h2>
+					<p>john_doe@mail.com</p>
+				</div>
+				<ul>
+					<li><a onclick="openTab('account')" class="active">Account <span>></span></a></li>
+					<li><a onclick="openTab('change-password')">Change Password <span>></span></a></li>
+					<li><a href="/cheMart/logout">Logout <span>></span></a></li>
+				</ul>
+			</div>
+			<div class="account-detail">
+				<h2>Account</h2>
+				<div class="billing-detail">
+					<form class="checkout-form">
+						<div class="form-inline">
+							<div class="form-group">
+								<label>First Name</label>
+								<input type="text" id="fname" name="fname" value="John">
+							</div>
+							<div class="form-group">
+								<label>Last Name</label>
+								<input type="text" id="lname" name="lname" value="Doe">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Company Name (Optional)</label>
+							<input type="text" id="cname" name="cname">
+						</div>
+						<div class="form-inline">
+							<div class="form-group">
+								<label>Country</label>
+								<select id="country" name="country">
+									<option selected>---Select a Country---</option>
+									<option value="india">india</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>City</label>
+								<select id="city" name="city">
+									<option selected>---Select a City---</option>
+									<option value="Ahmedabad">Ahmedabad</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Address</label>
+							<textarea style="resize:none" id="address" name="address"
+								rows="3">xyz area, street 24 </textarea>
+						</div>
+						<div class="form-inline">
+							<div class="form-group">
+								<label>Mobile</label>
+								<input type="text" id="mobile" name="mobile" minlength="11" maxlength="11"
+									value="555-XXXXXXX">
+							</div>
+						</div>
+						<div class="form-group">
+							<label></label>
+							<input type="submit" id="update" name="update" value="Update">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

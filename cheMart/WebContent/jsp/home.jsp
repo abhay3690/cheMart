@@ -1,3 +1,9 @@
+<%
+	if(session.getAttribute("name") == null){
+		response.sendRedirect("/cheMart/jsp/myAccount/login.jsp");
+	}
+
+%>
 <!DOCTYPE html>
 <html lang="en">
  	<head>
@@ -22,12 +28,13 @@
 						</div>
 					</a>
 				</div> <!-- logo -->
-				<div class="shop-icon">
+				<div class="shop-icon" style="margin: 24px;">
 					<div class="dropdown">
 						<img src="/cheMart/jsp/img/icons/account.png">
+						<p style="margin-left:-28px;"><%=session.getAttribute("name") %></p>
 						<div class="dropdown-menu">
 							<ul>
-								<li><a href="#">My Account</a></li>								
+								<li><a onclick="openTab('account')">My Account</a></li>								
 								<li><a href="#">Settings</a></li>
 								<li><a href="/cheMart/logout">Logout</a></li>
 							</ul>

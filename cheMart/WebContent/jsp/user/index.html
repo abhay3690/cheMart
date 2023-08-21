@@ -4,26 +4,12 @@
  	<head>
  		<!-- Meta Tags -->
 		<meta charset="UTF-8">
-		<meta name="author" content="Kamran Mubarik">
+		<meta name="author" content="Abhay Suthar">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Title -->
  		<title>Chemart Chemical trading</title>
  		<!-- Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<!-- Javascript -->	
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  		<script>
-		    $(document).ready(function(){
-		      $('.slider').bxSlider({
-				  auto: true,
-				  autoControls: true,
-				  stopAutoOnClick: true,
-				  pager: true
-				});
-		    });
-		 </script>
  	</head>
 <body>
 
@@ -31,7 +17,7 @@
 		<div class="container">
 			<div class="brand">
 				<div class="logo">
-					<a href="index.html">
+					<a onclick="navLink('dashboard')">
 						<img src="img/icons/online_shopping.png">
 						<div class="logo-text">
 							<p class="big-logo">Chemart</p>
@@ -44,8 +30,8 @@
 						<img src="img/icons/account.png">
 						<div class="dropdown-menu">
 							<ul>
-								<li><a href="account.html">My Account</a></li>
-								<li><a href="orders.html">My Orders</a></li>
+								<li><a onclick="navLink('account')">My Account</a></li>
+								<li><a onclick="navLink('orders')">My Orders</a></li>
 							</ul>
 						</div>
 					</div>
@@ -110,11 +96,10 @@
 			<div class="menu-bar">
 				<div class="menu">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="shop.html">Shop</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="caution.html">Caution</a></li>
+						<li><a onclick="navLink('dashboard')" >Home</a></li>
+						<li><a onclick="navLink('shop')">Shop</a></li>
+						<li><a onclick="navLink('about')">About</a></li>
+						<li><a onclick="navLink('contact')">Contact</a></li>
 					</ul>
 				</div>
 				<div class="search-bar">
@@ -130,192 +115,8 @@
 	</header> <!-- header -->
 
 	<div class="container">
-		<main>
-			<div class="slider">
-				<div class="slide-1">
-					<img src="img/chem/chemicon.jpg">
-					<div class="slider-text">
-						<h3>Sale 40% off</h3>
-						<h2>companies chemical</h2>
-						<a href="#">Shop Now</a>
-					</div>
-				</div>
-				<div class="slide-2">
-					<img src="img/chem/chemmain2.jpg">
-					<div class="slider-text">
-						<h3>Sale 20% off</h3>
-						<h2>Wash chemical</h2>
-						<a href="#">Shop Now</a>
-					</div>
-				</div>
-				<div class="slide-3">
-					<img src="img/chem/chemmain3.jpg">
-					<div class="slider-text">
-						<h3>Sale 50% off</h3>
-						<h2>PetroChemicales</h2>
-						<a href="#">Shop Now</a>
-					</div>
-				</div>		
-			</div> <!-- slider -->
-
-			<div class="new-product-section">
-				<div class="product-section-heading">
-					<h2> CHemical <img src="img/icons/increase.png"></h2>
-					<h3>Most selling chemical for the month</h3>
-				</div>
-				<div class="product-content">
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img1.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Watches</h3>
-							<h2>Gray Color Men's Watch</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.4500/-</p>
-						</div>						
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img2.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Pants</h3>
-							<h2>Levi's Jeans Pant</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.2000/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img3.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Watches</h3>
-							<h2>Black Men's Watch</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.4000/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img4.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Shoes</h3>
-							<h2>Nick Black Sneakers</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.3200/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img5.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Glasses</h3>
-							<h2>Wood Frame Sun Glass</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.1200/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img6.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Women's / Hand Bags</h3>
-							<h2>Leather Hand Bag</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.3800/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img7.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Shoes</h3>
-							<h2>Men's Sneaker</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.3500/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img8.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Women's / Hand Bags</h3>
-							<h2>Brown Leather Hand Bag</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.5200/-</p>
-						</div>
-					</div>
-				</div>
-			</div> <!-- New Product Section -->
-
-			<!-- <div class="collection">
-				<div class="men-collection">
-					<h2>Men's Collection</h2>
-				</div>
-				<div class="women-collection">
-					<h2>Women's Collection</h2>
-				</div>
-			</div> Collection Section -->
-
-			<div class="new-product-section">
-				<div class="product-section-heading">
-					<h2>Recommend chemical <img src="img/icons/good_quality.png"></h2>
-					<h3>OUR BEST CHEMICAL RECOMMENDED FOR YOU</h3>
-				</div>
-				<div class="product-content">
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img1.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Watches</h3>
-							<h2>Gray Color Men's Watch</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.4500/-</p>
-						</div>						
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img2.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Pants</h3>
-							<h2>Levi's Jeans Pant</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.2000/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img3.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Watches</h3>
-							<h2>Black Men's Watch</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.4000/-</p>
-						</div>
-					</div>
-					<div class="product">
-						<a href="product.html">
-							<img src="img/product/img4.jpg">
-						</a>
-						<div class="product-detail">
-							<h3>Men's / Shoes</h3>
-							<h2>Nick Black Sneakers</h2>
-							<a href="#">Add to Cart</a>
-							<p>Rs.3200/-</p>
-						</div>
-					</div>
-				</div>
-			</div> <!-- Recommend Product Section -->
+		<main id="main-container">
+			
 		</main> <!-- Main Area -->
 	</div>
 
@@ -328,10 +129,10 @@
 					</div>
 					<div class="widget-content">
 						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="refund.html">Refund Policy</a></li>
-							<li><a href="terms.html">Terms & Conditions</a></li>
+							<li><a onclick="navLink('about')">About</a></li>
+							<li><a onclick="navLink('contact')">Contact</a></li>
+							<li><a onclick="navLink('refund')">Refund Policy</a></li>
+							<li><a onclick="navLink('terms')">Terms & Conditions</a></li>
 						</ul>
 					</div>
 				</div>
@@ -341,10 +142,10 @@
 					</div>
 					<div class="widget-content">
 						<ul>
-							<li><a href="account.html">My Account</a></li>
-							<li><a href="orders.html">My Orders</a></li>
-							<li><a href="cart.html">Cart</a></li>
-							<li><a href="checkout.html">Checkout</a></li>
+							<li><a onclick="navLink('account')">My Account</a></li>
+							<li><a onclick="navLink('orders')">My Orders</a></li>
+							<li><a onclick="navLink('cart')">Cart</a></li>
+							<li><a onclick="navLink('checkout')">Checkout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -378,7 +179,7 @@
 			</div> <!-- Footer Widget -->
 			<div class="footer-bar">
 				<div class="copyright-text">
-					<p>Copyright 2021 - All Rights Reserved</p>
+					<p>Copyright 2023 - All Rights Reserved</p>
 				</div>
 				<div class="payment-mode">
 					<img src="img/icons/paper_money.png">
@@ -390,5 +191,19 @@
 	</footer> <!-- Footer Area -->
 
 </body>
-
+<!-- Javascript -->	
+<script src="/cheMart/jsp/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="/cheMart/jsp/user/js/index.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+		  auto: true,
+		  autoControls: true,
+		  stopAutoOnClick: true,
+		  pager: true
+		});
+    });
+ </script>
 </html>

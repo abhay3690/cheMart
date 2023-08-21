@@ -30,6 +30,9 @@ function openTab(tab){
 	}
 	if(tab == 'category')
 		loadCategory();
+	if(tab === 'account'){
+		
+	}	
 
 }
 
@@ -72,8 +75,13 @@ function addChemProduct(){
 		data: {"product":JSON.stringify(product)},
 		dataType: "text",
 		success: function(response) {
-			if(response === "true"){
+			response = JSON.parse(response);
+			if(response.status === "exists"){
+				alert("This product already exists!")
+			}else if(response.status === "success"){
 				openTab("product");
+			}else if(response.status === "failed"){
+				alert("Something went wrong, Please contact administrator!")
 			}
 		}
 	})
@@ -141,9 +149,24 @@ function addChemCategory(){
 		success: function(response) {
 			if(response === "true"){
 				openTab("category");
+			}else{
+				alert("This category already exists!")
 			}
 		}
 	})
+}
+
+function loadAccountDetails(){
+	$.ajax({
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		url: "/cheMart/jsp/admin/getCategoryList.jsp",
+		type: "GET",
+		dataType: "text",
+		async: false,
+		success: function(response) {
+			let jsonObj = JSON.parse(response);
+		}
+	});
 }
 
 openTab("index");

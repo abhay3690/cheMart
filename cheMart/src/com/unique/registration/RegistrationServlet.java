@@ -5,9 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,30 +20,29 @@ public class RegistrationServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String uname = request.getParameter("name");
+		String ufname = request.getParameter("fname");
+		String ulname = request.getParameter("lname");
 		String uemail = request.getParameter("email");
 		String upwd = request.getParameter("password");
 		String umobile = request.getParameter("contact");
-		RequestDispatcher dispatcher = null;
+
 		Connection con = null;
 		try {
 			con = DBConnection.getConnection();
 			PreparedStatement pst = con
-			.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?)");
-			pst.setString(1, uname);
-			pst.setString(2, upwd);
-			pst.setString(3, uemail);
-			pst.setString(4, umobile);
+			.prepareStatement("insert into users(ufname,ulname,pwd,email,mobileNo) values(?,?,?,?,?)");
+			pst.setString(1, ufname);
+			pst.setString(2, ulname);
+			pst.setString(3, upwd);
+			pst.setString(4, uemail);
+			pst.setString(5, umobile);
 
 			int rowCount = pst.executeUpdate();
-			if (rowCount > 0) {
-				request.setAttribute("status", "success");
-
-			} else {
-				request.setAttribute("status", "failed");
+			if (rowCount <= 0) {
+				response.getWriter().print("Someting went wrong, Please contact administrator!");
 			}			
-			response.sendRedirect("/cheMart/jsp/myAccount/registration.jsp");
 		} catch (Exception e) {
+			response.getWriter().print("Someting went wrong, Please contact administrator!");
 			e.printStackTrace();
 		} finally {
 			try {

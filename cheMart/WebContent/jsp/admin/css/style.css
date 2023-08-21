@@ -252,3 +252,89 @@ footer .footer-bar .copyright-text p{
 	font-weight: bold;
 	padding-top: 20px;
 }
+/* Account Page === Profile */
+main .account-page{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+main .account-page .profile{
+	width: 30%;
+}
+main .account-page .profile .profile-img{
+	width: 140px;
+	height: 160px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	overflow: none;
+	text-align: center;
+}
+main .account-page .profile .profile-img img{
+	width: 100%;
+	height: 140px;
+	border-radius: 50%;
+	border: 1px solid rgba(236, 240, 241,0.3);
+	object-fit: cover;
+	box-shadow: 0px 0px 8px #9e9e9e;
+}
+main .account-page .profile .profile-img h2{
+	color: var(--darkStaleGray);
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+main .account-page .profile ul{
+	list-style: none;
+	padding: 10px;
+}
+main .account-page .profile ul li{
+	margin-bottom: 5px;
+}
+main .account-page .profile ul li a{
+	color: var(--darkStaleGray);
+	border: 1px solid rgba(236, 240, 241,0.3);
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: left;
+	padding: 5px 8px;
+	display: block;
+}
+main .account-page .profile ul li a:hover{
+	background-color: var(--darkStaleGray);
+	color: var(--khaki);
+}
+main .account-page .profile ul li a span{
+	float: right;
+}
+/* Account Page === Detail */
+main .account-page .account-detail{
+	width: 60%;
+}
+main .account-page .account-detail input[type="submit"]{
+	background-color: var(--khaki);
+	color: var(--darkStaleGray);
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 8px;
+	margin-top: 20px;
+	display: block;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+main .account-page .account-detail input[type="submit"]:hover{
+	background-color: var(--darkStaleGray);
+	color: var(--khaki);
+}
+
+main .account-page .account-detail table{
+	border: 1px solid #eee;
+	width: 100%;
+}
+
+main .account-page .account-detail table th,
+main .account-page .account-detail table td{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #eee;
+}
