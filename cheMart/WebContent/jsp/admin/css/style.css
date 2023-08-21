@@ -25,7 +25,7 @@ body{
 	background-color: var(--darkStaleGray);
 }
 hr{
-	border: 1px solid rgba(236, 240, 241,0.3);
+	border: 1px solid rgb(255, 0, 255);
 }
 .container{
 	width: 1280px;
