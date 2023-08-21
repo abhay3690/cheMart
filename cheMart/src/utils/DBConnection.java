@@ -13,7 +13,7 @@ public class DBConnection {
 //			Properties prop = ReadProperties.readPropertiesFile("/cheMart/conf/credentials.properties");
 //		      System.out.println("username: "+ prop.getProperty("username"));
 //		      System.out.println("password: "+ prop.getProperty("password"));
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cheMart","root","root");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cheMart","root","Abhay@3690");
 		}catch (Exception e) {
 			System.out.println("Not able find required Driver!");
 		}

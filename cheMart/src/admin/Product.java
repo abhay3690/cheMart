@@ -31,6 +31,7 @@ public class Product {
 				oJsonArray.put(jsonObj);
 			}
 		}catch(Exception ex) {
+			
 			ex.printStackTrace();
 		}
 		return String.valueOf(oJsonArray);
