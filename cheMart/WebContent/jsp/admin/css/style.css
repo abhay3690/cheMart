@@ -211,7 +211,7 @@ main form .form-inline{
 main form .form-inline .form-group{
 	width: 49%;
 }
-main form input[type="submit"]{
+main form input[type="button"]{
 	background-color: var(--khaki);
 	color: var(--darkStaleGray);
 	text-transform: uppercase;
@@ -224,7 +224,7 @@ main form input[type="submit"]{
 	cursor: pointer;
 	width: 100%;
 }
-main form input[type="submit"]:hover{
+main form input[type="button"]:hover{
 	background-color: var(--darkStaleGray);
 	color: var(--khaki);
 }

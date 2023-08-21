@@ -4,37 +4,36 @@
 		<div class="form-inline">
 			<div class="form-group">
 				<label>Product Name</label>
-				<input type="text" name="pname">
+				<input type="text" name="pname" id="pname">
 			</div>
 			<div class="form-group">
 				<label>Price</label>
-				<input type="text" name="price">
+				<input type="text" name="price" id="price">
 			</div>
 		</div>
 		<div class="form-group">
 			<label>Short Description</label>
-			<input type="text" name="sdesc">
+			<input type="text" name="sdesc" id="sdesc">
 		</div>
 		<div class="form-group">
 			<label>Long Description</label>
-			<textarea style="resize:none" name="ldesc" rows="3"></textarea>
+			<textarea style="resize:none" name="ldesc" id="ldesc" rows="3"></textarea>
 		</div>
 		<div class="form-inline">
 			<div class="form-group">
-				<label>Category</label>
-				<select name="category">
-					<option>---Select a Category---</option>
-					<option>india</option>
+				<label>Company</label>
+				<select name="company" id="chemCategory">
+					<option>---Select a Company---</option>
 				</select>
 			</div>
 			<div class="form-group">
 				<label>Images</label>
-				<input type="file" name="image" multiple>
+				<input type="file" name="image" id="image" multiple>
 			</div>
 		</div>
 		<div class="form-group">
 			<label></label>
-			<input type="submit" name="addProduct" value="Add Product">
+			<input type="button" name="addProduct" value="Add Product" id="addProduct" onclick="addChemProduct()">
 		</div>
 	</form>
 </div>

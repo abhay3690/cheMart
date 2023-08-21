@@ -1,10 +1,41 @@
+create table companyDetail(
+	id int not null auto_increment primary key,
+	companyName varchar(100) not null,
+	tradeType enum('sale','purchase') not null,
+	deleteFlag tinyint(1) not null default 0,
+	Unique (companyName, tradeType)
+);
+
+
 create table product(
 	id int(11) auto_increment primary key,
     name varchar(255) not null default '',
     price decimal(10,2) not null default 0.00,
-    companyName varchar(60) not null default '',
-    quantity int(5) not null default 0,
-    deleteFlag tinyint(1) not null default 0
+    companyId int(11),
+    shortDesc varchar(255) not null default '',
+    longDesc text,
+    image blob,
+    deleteFlag tinyint(1) not null default 0,
+    FOREIGN KEY (companyId) REFERENCES companyDetail(id)
+);
+
+create table stock(
+	id int(11) auto_increment primary key,
+	productId int(11),
+	quantity int(5) not null default 0,
+	deleteFlag tinyint(1) not null default 0,
+    FOREIGN KEY (productId) REFERENCES product(id)
+);
+
+create table users(
+	id int(11) auto_increment primary key,
+	ulname varchar(30) not null default '',
+	ufname varchar(30) not null,
+	email varchar(100) not null,
+	pwd varchar(20) not null,
+	mobileNo varchar(20) not null,
+	userType tinyint(1) not null default 0,
+	deleteFlag tinyint(1) not null default 0
 );
 
 create table orders(
@@ -15,13 +46,7 @@ create table orders(
     orderdDate datetime not null default now(),
     orderStatus tinyint(1) not null default 0,
     deliveredDate datetime,
-	deleteFlag tinyint(1) not null default 0
+	deleteFlag tinyint(1) not null default 0,
+    FOREIGN KEY (productId) REFERENCES product(id),
+    FOREIGN KEY (uid) REFERENCES users(id)
 );
-
-alter table product add category varchar(100);
-alter table product add shortDesc varchar(255) not null default '';
-alter table product add longDesc text ;
-alter table product add image blob;
-
-insert into product(name,price,companyName,quantity) values('HCL',120,'HCL Pharma',500),
-('Methyl Benzine',80,'HCL Pharma',100);
