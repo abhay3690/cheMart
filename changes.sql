@@ -50,3 +50,5 @@ create table orders(
     FOREIGN KEY (productId) REFERENCES product(id),
     FOREIGN KEY (uid) REFERENCES users(id)
 );
+
+alter table users modify column email varchar(100) unique not null;
