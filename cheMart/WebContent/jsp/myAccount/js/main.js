@@ -1,7 +1,17 @@
 function login(){
+	let username = $("#username");
+	let password = $("#password");
+	if(username.val() == '' || username.is(':invalid')){
+		username.attr("required","required");
+		return;
+	}
+	if(password.val() == '' || password.is(':invalid')){
+		password.attr("required","required");
+		return;
+	}
 	let credentials = {
-		username:document.getElementById("username").value,
-		password:document.getElementById("password").value
+		username:username.val(),
+		password:password.val()
 	}
 	$.ajax({
 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -19,22 +29,51 @@ function login(){
 	})
 }
 
-function register(){
-	let password = document.getElementById("password").value;
-	let re_password = document.getElementById("re_pass").value;
+function register(){	
+	let fname = $("#fname");
+	let lname = $("#lname");
+	let email = $("#email");
+	let contact = $("#contact");
+	let password = $("#password");
+	let re_password = $("#re_pass");
 	
-	if(password !== re_password){
-		alert("Password fields does not match!");
-		$("#re_pass").focus();
+	if(fname.val() == '' || fname.is(':invalid')){
+		fname.attr("required","required");
+		return;
+	}
+	if(lname.val() == '' || lname.is(':invalid')){
+		lname.attr("required","required");
+		return;
+	}
+	if(email.val() == '' || email.is(':invalid')){
+		email.attr("required","required");
+		return;
+	}
+	if(password.val() == '' || password.is(':invalid')){
+		password.attr("required","required");
 		return;
 	}
 	
+	if(password.val() !== re_password.val()){
+		alert("Password fields does not match!");
+		re_password.focus();
+		return;
+	}
+	if(contact.val() == '' || contact.is(':invalid')){
+		contact.attr("required","required");
+		return;
+	}
+	/*if(!$("#agree-term").prop("checked")){
+		$("#agree-term").attr("required","required");
+		return;
+	}*/
+	
 	let credentials = {
-		fname:document.getElementById("fname").value,
-		lname:document.getElementById("lname").value,
-		email:document.getElementById("email").value,
-		contact:document.getElementById("contact").value,
-		password:password
+		fname:fname.val(),
+		lname:lname.val(),
+		email:email.val(),
+		contact:contact.val(),
+		password:password.val()
 	}
 	$.ajax({
 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

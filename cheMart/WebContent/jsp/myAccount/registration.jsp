@@ -27,31 +27,31 @@
 							<div class="form-group">
 								<label for="fname"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="fname" id="fname" placeholder="First Name" required/>
+									type="text" name="fname" id="fname" placeholder="First Name"/>
 							</div>
 							<div class="form-group">
 								<label for="lname"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="fname" id="lname" placeholder="Last Name" required/>
+									type="text" name="fname" id="lname" placeholder="Last Name"/>
 							</div>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" required/>
+									type="email" name="email" id="email" placeholder="Your Email"/>
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
 									type="password" name="password" id="password"
-									placeholder="Password" required/>
+									placeholder="Password"/>
 							</div>
 							<div class="form-group">
 								<label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="password" name="re_pass" id="re_pass"
-									placeholder="Repeat your password" required/>
+									placeholder="Repeat your password"/>
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="tel" name="contact" id="contact"
-									placeholder="Contact Number" required />
+									placeholder="Contact Number" />
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="agree-term" id="agree-term"
