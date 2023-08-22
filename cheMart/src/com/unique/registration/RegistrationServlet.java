@@ -3,6 +3,7 @@ package com.unique.registration;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -28,29 +29,55 @@ public class RegistrationServlet extends HttpServlet {
 
 		Connection con = null;
 		try {
-			con = DBConnection.getConnection();
-			PreparedStatement pst = con
-			.prepareStatement("insert into users(ufname,ulname,pwd,email,mobileNo) values(?,?,?,?,?)");
-			pst.setString(1, ufname);
-			pst.setString(2, ulname);
-			pst.setString(3, upwd);
-			pst.setString(4, uemail);
-			pst.setString(5, umobile);
+			if(isEmailExists(uemail)) {
+				response.getWriter().print("This email address already exists!");
+			}else {
+				con = DBConnection.getConnection();
+				PreparedStatement pst = con
+				.prepareStatement("insert into users(ufname,ulname,pwd,email,mobileNo) values(?,?,?,?,?)");
+				pst.setString(1, ufname);
+				pst.setString(2, ulname);
+				pst.setString(3, upwd);
+				pst.setString(4, uemail);
+				pst.setString(5, umobile);
 
-			int rowCount = pst.executeUpdate();
-			if (rowCount <= 0) {
-				response.getWriter().print("Someting went wrong, Please contact administrator!");
-			}			
+				int rowCount = pst.executeUpdate();
+				if (rowCount <= 0) {
+					response.getWriter().print("Someting went wrong, Please contact administrator!");
+				}
+			}
+			
 		} catch (Exception e) {
 			response.getWriter().print("Someting went wrong, Please contact administrator!");
 			e.printStackTrace();
 		} finally {
 			try {
-				con.close();
+				if(con != null)
+					con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public boolean isEmailExists(String strEmail) {
+		boolean bFlag = false;
+		ResultSet oRs = null;
+		PreparedStatement oPrStmt = null;
+		try {
+			Connection con = DBConnection.getConnection();
+			oPrStmt = con.prepareStatement("SELECT id FROM users WHERE deleteFlag = 0 and email=?");
+			oPrStmt.setString(1, strEmail);
+			oRs = oPrStmt.executeQuery();
+			if(oRs.next()) {
+				bFlag = true;
+			}
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			
+		}
+		return bFlag;
 	}
 
 }
