@@ -4,8 +4,8 @@
 			<div class="profile">
 				<div class="profile-img">
 					<img src="img/product/img5.jpg">
-					<h2>John Doe</h2>
-					<p>john_doe@mail.com</p>
+					<h2 id="fullName"></h2>
+					<p id="uEmail"></p>
 				</div>
 				<ul>
 					<li><a onclick="openTab('account')" class="active">Account <span>></span></a></li>
@@ -20,11 +20,11 @@
 						<div class="form-inline">
 							<div class="form-group">
 								<label>First Name</label>
-								<input type="text" id="fname" name="fname" value="John">
+								<input type="text" id="fname" name="fname" value="">
 							</div>
 							<div class="form-group">
 								<label>Last Name</label>
-								<input type="text" id="lname" name="lname" value="Doe">
+								<input type="text" id="lname" name="lname" value="">
 							</div>
 						</div>
 						<div class="form-group">
@@ -35,15 +35,15 @@
 							<div class="form-group">
 								<label>Country</label>
 								<select id="country" name="country">
-									<option selected>---Select a Country---</option>
-									<option value="india">india</option>
+									<option>---Select a Country---</option>
+									<option value="india" selected>india</option>
 								</select>
 							</div>
 							<div class="form-group">
 								<label>City</label>
 								<select id="city" name="city">
-									<option selected>---Select a City---</option>
-									<option value="Ahmedabad">Ahmedabad</option>
+									<option>---Select a City---</option>
+									<option value="Ahmedabad" selected>Ahmedabad</option>
 								</select>
 							</div>
 						</div>
@@ -55,13 +55,13 @@
 						<div class="form-inline">
 							<div class="form-group">
 								<label>Mobile</label>
-								<input type="text" id="mobile" name="mobile" minlength="11" maxlength="11"
-									value="555-XXXXXXX">
+								<input type="tel" id="mobileNo" name="mobile" minlength="11" maxlength="11"
+									value="">
 							</div>
 						</div>
 						<div class="form-group">
 							<label></label>
-							<input type="submit" id="update" name="update" value="Update">
+							<input type="button" id="update" name="update" value="Update">
 						</div>
 					</form>
 				</div>

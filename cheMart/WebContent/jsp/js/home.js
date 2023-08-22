@@ -31,9 +31,12 @@ function openTab(tab){
 	if(tab == 'category')
 		loadCategory();
 	if(tab === 'account'){
-		
-	}	
-
+		$("#mobileNo").mask("999-999-9999");
+		loadAccountDetails()
+	}
+	if(tab === 'change-password'){
+		loadAccountDetails();
+	}
 }
 
 function loadProducts() {
@@ -159,12 +162,17 @@ function addChemCategory(){
 function loadAccountDetails(){
 	$.ajax({
 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		url: "/cheMart/jsp/admin/getCategoryList.jsp",
+		url: "/cheMart/getUserDetail",
 		type: "GET",
 		dataType: "text",
 		async: false,
 		success: function(response) {
 			let jsonObj = JSON.parse(response);
+			$("#fullName").text(jsonObj.fname + " "+jsonObj.lname);
+			$("#fname").val(jsonObj.fname);
+			$("#lname").val(jsonObj.lname);
+			$("#uEmail").text(jsonObj.email);
+			$("#mobileNo").val(jsonObj.mobileNo);
 		}
 	});
 }

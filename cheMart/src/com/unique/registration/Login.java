@@ -34,6 +34,7 @@ public class Login extends HttpServlet {
 			
 			ResultSet rs = pst.executeQuery();
 			if (rs.next()) {
+				session.setAttribute("uid", rs.getInt("id"));
 				session.setAttribute("name",rs.getString("ufname")+" "+rs.getString("ulname"));
 			}else {
 				response.getWriter().print("Username or password is incorrect!");

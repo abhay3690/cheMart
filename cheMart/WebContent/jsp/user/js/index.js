@@ -1,8 +1,4 @@
 function navLink(tab) {
-	/*$(".sidebar > ul > li > a:not("+tab+")").removeClass("active");
-	$("#"+tab).addClass('active');
-	$("#currentTab").text(tab);*/
-
 	$.ajax({
 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 		url: "/cheMart/jsp/user/" + tab + ".html",
@@ -34,20 +30,6 @@ function navLink(tab) {
 			alert("An error occurred while loading data!");
 		}
 	});
-	/*if(tab === 'index'){
-		$("#currentTab").text("home");
-		$("#main-content").addClass("dashboard");
-		loadProducts();
-	}else
-		$("#main-content").removeClass("dashboard");
-		
-	if(tab == 'product'){
-		loadProducts();
-		getCompanyDetail();
-	}
-	if(tab == 'category')
-		loadCategory();*/
-
 }
 
 navLink("dashboard");

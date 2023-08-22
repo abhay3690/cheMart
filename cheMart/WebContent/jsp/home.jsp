@@ -2,7 +2,6 @@
 	if(session.getAttribute("name") == null){
 		response.sendRedirect("/cheMart/jsp/myAccount/login.jsp");
 	}
-
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +34,6 @@
 						<div class="dropdown-menu">
 							<ul>
 								<li><a onclick="openTab('account')">My Account</a></li>								
-								<li><a href="#">Settings</a></li>
 								<li><a href="/cheMart/logout">Logout</a></li>
 							</ul>
 						</div>
@@ -71,7 +69,7 @@
 		<div class="container">
 			<div class="footer-bar">
 				<div class="copyright-text">
-					<p>--------------------------------------------------------------------------------------------------</p>
+					<p>Copyright 2023 - All Rights Reserved</p>
 				</div>
 			</div> <!-- Footer Bar -->
 		</div>
@@ -79,5 +77,6 @@
 
 </body>
 <script src="/cheMart/jsp/js/jquery-3.6.1.min.js"></script>
+<script src="/cheMart/jsp/js/jquery.maskedinput.js"></script>
 <script src="/cheMart/jsp/js/home.js"></script>
 </html>
