@@ -1,3 +1,8 @@
+<%
+	if(session.getAttribute("name") == null){	
+		response.sendRedirect("/cheMart/jsp/myAccount/login.jsp");
+	}
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +33,12 @@
 				<div class="shop-icon">
 					<div class="dropdown">
 						<img src="img/icons/account.png">
+						<p style="margin-left:-28px;"><%=session.getAttribute("name") %></p>
 						<div class="dropdown-menu">
 							<ul>
 								<li><a onclick="navLink('account')">My Account</a></li>
 								<li><a onclick="navLink('orders')">My Orders</a></li>
+								<li><a href="/cheMart/logout">Logout</a></li>
 							</ul>
 						</div>
 					</div>
@@ -193,6 +200,7 @@
 </body>
 <!-- Javascript -->	
 <script src="/cheMart/jsp/js/jquery-3.6.1.min.js"></script>
+<script src="/cheMart/jsp/js/jquery.maskedinput.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="/cheMart/jsp/user/js/index.js"></script>

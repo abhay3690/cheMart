@@ -1,6 +1,10 @@
 <%
 	if(session.getAttribute("name") == null){
 		response.sendRedirect("/cheMart/jsp/myAccount/login.jsp");
+	}else{
+		if("0".equals(session.getAttribute("userType").toString())){
+			response.sendRedirect("/cheMart/jsp/user/home.jsp");
+		}
 	}
 %>
 <!DOCTYPE html>
@@ -30,7 +34,6 @@
 				<div class="shop-icon" style="margin: 24px;">
 					<div class="dropdown">
 						<img src="/cheMart/jsp/img/icons/account.png">
-						<p style="margin-left:-28px;"><%=session.getAttribute("name") %></p>
 						<div class="dropdown-menu">
 							<ul>
 								<li><a onclick="openTab('account')">My Account</a></li>								
@@ -38,6 +41,7 @@
 							</ul>
 						</div>
 					</div>
+					<p style="margin-left:-28px;"><%=session.getAttribute("name") %></p>
 				</div> <!-- shop icons -->
 			</div> <!-- brand -->
 		</div> <!-- container -->
