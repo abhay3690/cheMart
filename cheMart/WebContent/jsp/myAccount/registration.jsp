@@ -8,6 +8,17 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
+<style>
+select {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 6px 30px;
+  font-family: Poppins;
+  box-sizing: border-box; 
+}
+</style>
 </head>
 
 <body>
@@ -52,6 +63,13 @@
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="tel" name="contact" id="contact"
 									placeholder="Contact Number" />
+							</div>
+							<div class="form-group">
+								<select name="userType" id="userType">
+									<option value="-1">---Select a Type---</option>
+									<option value="0" selected>Buy</option>
+									<option value="1">Sale</option>
+								</select>
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="agree-term" id="agree-term"

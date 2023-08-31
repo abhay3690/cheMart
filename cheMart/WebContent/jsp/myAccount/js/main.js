@@ -36,6 +36,7 @@ function register(){
 	let contact = $("#contact");
 	let password = $("#password");
 	let re_password = $("#re_pass");
+	let userType = $("#userType");
 	
 	if(fname.val() == '' || fname.is(':invalid')){
 		fname.attr("required","required");
@@ -73,7 +74,8 @@ function register(){
 		lname:lname.val(),
 		email:email.val(),
 		contact:contact.val(),
-		password:password.val()
+		password:password.val(),
+		userType:userType.val()
 	}
 	$.ajax({
 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

@@ -26,7 +26,9 @@ public class RegistrationServlet extends HttpServlet {
 		String uemail = request.getParameter("email");
 		String upwd = request.getParameter("password");
 		String umobile = request.getParameter("contact");
-
+		String userType = request.getParameter("userType");
+		int nUserType = Integer.parseInt(userType);
+		
 		Connection con = null;
 		try {
 			if(isEmailExists(uemail)) {
@@ -34,12 +36,13 @@ public class RegistrationServlet extends HttpServlet {
 			}else {
 				con = DBConnection.getConnection();
 				PreparedStatement pst = con
-				.prepareStatement("insert into users(ufname,ulname,pwd,email,mobileNo) values(?,?,?,?,?)");
+				.prepareStatement("insert into users(ufname,ulname,pwd,email,mobileNo,userType) values(?,?,?,?,?,?)");
 				pst.setString(1, ufname);
 				pst.setString(2, ulname);
 				pst.setString(3, upwd);
 				pst.setString(4, uemail);
 				pst.setString(5, umobile);
+				pst.setInt(6, nUserType);
 
 				int rowCount = pst.executeUpdate();
 				if (rowCount <= 0) {
