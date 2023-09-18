@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Abhay Suthar">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>Chemart Chemical trading</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a onclick="navLink('dashboard')">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">Chemart</p>
+							<p class="small-logo">Chemical trading</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a onclick="navLink('account')">My Account</a></li>
+								<li><a onclick="navLink('orders')">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Chemical Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>Chemical name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>Chemical name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Chemical Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>Chemical name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>Chemical name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a onclick="navLink('dashboard')" >Home</a></li>
+						<li><a onclick="navLink('shop')">Shop</a></li>
+						<li><a onclick="navLink('about')">About</a></li>
+						<li><a onclick="navLink('contact')">Contact</a></li>
+												<li><a onclick="navLink('caution')">Caution</a></li>
+
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<!--<div class="container">
+		<main id="main-container">
+			
+		</main> <! Main Area ->
+	</div>-->
+	
+	
+	
+	<div class="container">
+		<main>
+			<div class="slider">
+				<div class="slide-1">
+					<img src="img/chem/chemicon.jpg">
+					<div class="slider-text">
+						<h3>Sale 40% off</h3>
+						<h2>companies chemical</h2>
+						<a href="#">Shop Now</a>
+					</div>
+				</div>
+				<div class="slide-2">
+					<img src="img/chem/chemmain2.jpg">
+					<div class="slider-text">
+						<h3>Sale 20% off</h3>
+						<h2>Wash chemical</h2>
+						<a href="#">Shop Now</a>
+					</div>
+				</div>
+				<div class="slide-3">
+					<img src="img/chem/chemmain3.jpg">
+					<div class="slider-text">
+						<h3>Sale 50% off</h3>
+						<h2>PetroChemicales</h2>
+						<a href="#">Shop Now</a>
+					</div>
+				</div>		
+			</div> <!-- slider -->
+
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2> CHemical <img src="img/icons/increase.png"></h2>
+					<h3>Most selling chemical for the month</h3>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img1.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>rust preventive oreder</h3>
+							<h2>Gray PURER RO 322 ALKALINE CLEANER MEMBRANE ALKALINE CLEANER</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.154/-</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img2.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Rust preventive oil</h3>
+							<h2>Purit RF 406DT</h2>
+							<br>
+						<br>
+						
+							<a href="#">Add to Cart</a>
+							<p>Rs.280/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img3.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>rust preventive oreder</h3>
+							<h2>PRUIT DW 40DI</h2>
+						<br>
+						<br>	
+							<a href="#">Add to Cart</a>
+							<p>Rs.400/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img4.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>ACITATE</h3>
+							<h2>ETHYL ACETATE | CAS NO.: 141-78-6 | CH3COOC2H5 | CLEAR LIQUID | FRUITY ODOR</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3200/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img5.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>LAUNDRY CHEMICALS</h3>
+							<h2>ENZYME 10X - 5KG | 10 KG | 25KG | ENZYMATIC LAUNDRY DETERGENT POWDER | APPLICATION | POWDE</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.1200/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img6.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>laundey chemaicals </h3>
+							<h2>SPOT ACTIVE RUST REMOVER| 2 LITRE (4 X 500ML)</h2>
+							<br>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3800/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img7.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>laundry chemicals</h3>
+							<h2>FEELSOFT ROSE 5 LITRE | 10 LITRE</h2>
+							<br>
+							<br>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3500/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img8.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>laundry cahemicals</h3>
+							<h2>ENZYME 10X - 5KG | 10 KG | 25KG | ENZYMATIC LAUNDRY DETERGENT POWDER | APPLICATION | POWDE</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.5200/-</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- New Product Section -->
+
+			<!-- <div class="collection">
+				<div class="men-collection">
+					<h2>Men's Collection</h2>
+				</div>
+				<div class="women-collection">
+					<h2>Women's Collection</h2>
+				</div>
+			</div> Collection Section -->
+
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2>Recommend chemical <img src="img/icons/good_quality.png"></h2>
+					<h3>OUR BEST CHEMICAL RECOMMENDED FOR YOU</h3>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img1.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>rust preventive oil</h3>
+							<h2>pruier </h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.4500/-</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img2.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>rust preventive oil</h3>
+							<h2>Pruit RF 40DF</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.200/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img3.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>aciton</h3>
+							<h2>hydrarte</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.4000/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/img4.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>acitate </h3>
+							<h2>ETHYL ACETATE | CAS NO.: 141-78-6 | CH3COOC2H5 | CLEAR LIQUID | FRUITY ODOR</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3200/-</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Recommend Product Section -->
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				
+						
+					</div>
+					<div class="widget-content">
+						<div class="footer-bar">
+					<p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+				</div>
+			
+				</div>
+				
+
+			</div> <!-- Footer Widget -->
+			
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+<!-- Javascript -->	
+<script src="/cheMart/jsp/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="/cheMart/jsp/user/js/index.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+		  auto: true,
+		  autoControls: true,
+		  stopAutoOnClick: true,
+		  pager: true
+		});
+    });
+ </script>
+</html>
