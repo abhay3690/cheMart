@@ -66,7 +66,8 @@
 						</div>
 					</div>
 					<div class="dropdown">
-						cart 							
+						<img alt= "jfasj" src="img/icons/shopping_cart.png" > 
+				
 						<div class="dropdown-menu cart-item">
 							<table border="1">
 								<thead>

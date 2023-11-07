@@ -60,4 +60,27 @@ function loadAccountDetails(){
 	});
 }
 
+function sendMessage(){
+	let contact = {
+		fname:document.getElementById("fname").value,
+		lname:document.getElementById("lname").value,
+		email:document.getElementById("email").value,
+		message:document.getElementById("message").value,
+		
+	};
+	$.ajax({
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		url: "/cheMart/jsp/admin/addcontact.jsp",
+		type: "POST",
+		data: {"contact":JSON.stringify(contact)},
+		dataType: "text",
+		success: function(response) {
+			response = JSON.parse(response);
+			if(response.status === "failed"){
+				alert("Something went wrong, Please contact administrator!")
+			}
+		}
+	})
+}
+
 navLink("dashboard");
