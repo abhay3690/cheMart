@@ -83,4 +83,64 @@ function sendMessage(){
 	})
 }
 
+
+function changePassword(){
+	let newpassword = document.getElementById("new_password").value;
+	let confirmpassword = document.getElementById("confirm_password").value;
+	
+	if(newpassword !== confirmpassword){
+		alert("New password doesn't match!");
+		return;
+	}
+	
+	let changepassword = {
+		password:document.getElementById("old_password").value
+	};
+	$.ajax({
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		url: "/cheMart/jsp/admin/changepassword.jsp",
+		type: "POST",
+		data: {"changepassword":JSON.stringify(changepassword)},
+		dataType: "text",
+		success: function(response) {
+			response = JSON.parse(response);
+			if(response.status === "failed"){
+				alert("Something went wrong, Please contact administrator!")
+			}else if(response.status === "success"){
+				alert("password changed successfully!")
+			}else{
+				alert(response.status);
+			}
+		}
+	})
+}
+
+
+function checkout(){
+	let checkout = {
+		firstname:document.getElementById("firstname").value,
+		lastname:document.getElementById("lastname").value,
+		companyname:document.getElementById("companyname").value,
+		country:document.getElementById("country").value,
+		city:document.getElementById("city").value,
+		address:document.getElementById("address").value,
+		oredernote:document.getElementById("ordernote").value
+	
+		
+	};
+	$.ajax({
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		url: "/cheMart/jsp/admin/checkout.jsp",
+		type: "POST",
+		data: {"checkout":JSON.stringify(checkout)},
+		dataType: "text",
+		success: function(response) {
+			response = JSON.parse(response);
+			if(response.status === "failed"){
+				alert("Something went wrong, Please contact administrator!")
+			}
+		}
+	})
+}
+
 navLink("dashboard");
