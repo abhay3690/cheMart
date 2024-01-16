@@ -1,0 +1,4 @@
+<%@page import="admin.Changepassword"%><%
+	String changepassword = request.getParameter("cahngepassword");
+	String returnJson = new Changepassword().changePassword(changepassword);
+%><%=returnJson%>

@@ -1,0 +1,161 @@
+<!-- FancyBox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.fancybox').fancybox({
+			openEffect: 'none',
+			closeEffect: 'none',
+
+			prevEffect: 'none',
+			nextEffect: 'none',
+
+			closeBtn: false,
+
+			helpers: {
+				title: {
+					type: 'inside'
+				},
+				buttons: {}
+			},
+
+			afterLoad: function () {
+				this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			}
+		});
+	});
+
+</script>
+
+<div class="breadcrumb">
+	<ul>
+		<li><a href="home.jsp">Home</a></li>
+		<li> / </li>
+		<li><a onclick="navLink('shop')">Shop</a></li>
+		<li> / </li>
+		<li><a>Chemical</a></li>
+	</ul>
+</div> <!-- End of Breadcrumb-->
+
+<div class="single-product">
+	<div class="images-section">
+		<div class="larg-img">
+			<img src="img/product/img1.jpg">
+		</div>
+		<div class="small-img">
+			<a class="fancybox" rel="group" href="img/product/img2.jpg">
+				<img src="img/product/img2.jpg">
+			</a>
+			<a class="fancybox" rel="group" href="img/product/img3.jpg">
+				<img src="img/product/img3.jpg">
+			</a>
+			<a class="fancybox" rel="group" href="img/product/img4.jpg">
+				<img src="img/product/img4.jpg">
+			</a>
+			<a class="fancybox" rel="group" href="img/product/img5.jpg">
+				<img src="img/product/img5.jpg">
+			</a>
+		</div>
+	</div> <!-- End of Images Section-->
+
+	<div class="product-detail">
+		<div class="product-name">
+			<h2>PURER RO 322 Alkaline Cleaner Membrane Alkaline Cleaner</h2>
+		</div>
+		<div class="product-price">
+			<h3>Rs.450/-</h3>
+		</div>
+		<hr>
+		<div class="product-description">
+
+			<br>Containers Plastic</br>
+			<br> Quantities</br>
+			</p>
+		</div>
+		<hr>
+		<div class="product-cart">
+			<form id="cart-form">
+				<div class="form-group">
+					<input type="number" class="cart-number" name="cartNumber" value="1" min="1" max="10">
+					<input type="submit" name="addToCart" value="Add To Cart">
+				</div>
+			</form>
+			<form id="wishlist-form">
+				<div class="form-group">
+					<input type="checkbox" class="wishlist" name="wishlist"> Add To Wishlist
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div class="product-meta">
+			<p><b>Category: </b> Product</p>
+			<p><b>Share This Product: </b> Facebook, Twitter</p>
+		</div>
+	</div> <!-- End of Product Detail-->
+</div>
+<hr>
+<div class="product-long-description">
+	<h3>Product Description</h3>
+	<p>mainlu used for home ditergent</p>
+
+	<hr>
+	<div class="new-product-section">
+		<div class="product-section-heading">
+			<h2>Recommend Chemical <img src="img/icons/good_quality.png"></h2>
+			<h3>OUR BEST CHEMICAL RECOMMENDED FOR YOU</h3>
+		</div>
+		<div class="product-content">
+			<div class="product">
+				<a onclick="navLink('product')">
+					<img src="img/product/img1.jpg">
+				</a>
+				<div class="product-detail">
+					<h3>Rust preventive oil</h3>
+					<h2>Purit RF 406DT</h2>
+					<a href="#">Add to Cart</a>
+					<p>Rs.1227/-</p>
+				</div>
+			</div>
+			<div class="product">
+				<a onclick="navLink('product')">
+					<img src="img/product/img2.jpg">
+				</a>
+				<div class="product-detail">
+					<h3>home worker product</h3>
+					<h2>PURER RO 322 Alkaline Cleaner Membrane Alkaline Cleaner</h2>
+					<a href="#">Add to Cart</a>
+					<p>Rs.1225/-</p>
+				</div>
+			</div>
+			<div class="product">
+				<a onclick="navLink('product')">
+					<img src="img/product/img3.jpg">
+				</a>
+				<div class="product-detail">
+					<h3>Rust preventive oil</h3>
+					<h2>Purit DW 40</h2>
+					<a href="#">Add to Cart</a>
+					<p>Rs.1006/-</p>
+				</div>
+			</div>
+			<div class="product">
+				<a onclick="navLink('product')">
+					<img src="img/product/img4.jpg">
+				</a>
+				<div class="product-detail">
+					<h3>Acitate</h3>
+					<h2>Ethyl Acetate | CAS No.: 141-78-6 | CH3COOC2H5 | Clear liquid | Fruity Odor</h2>
+					<a href="#">Add to Cart</a>
+					<p>Rs.277/-</p>
+				</div>
+			</div>
+		</div>
+	</div> <!-- Recommend Product Section -->

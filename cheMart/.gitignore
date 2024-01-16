@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+/build/
+=======
+build
+.classpath
+.settings
+.settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.eclipse.wst.common.component
+cheMart/.DS_Store
+cheMart/build/.DS_Store
+cheMart/src/.DS_Store
+cheMart/src/cheMart/.DS_Store
+*.component
+.DS_Store
+>>>>>>> 9d77507249f47083e58411db8112c6062c880add

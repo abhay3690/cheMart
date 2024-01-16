@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;cheMart/cheMart/WebContent/assets/img/portfolio&apos;" deleteContents="false" description="Delete resource &apos;cheMart/cheMart/WebContent/assets/img/portfolio&apos;" element1="/cheMart/cheMart/WebContent/assets/img/portfolio" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1690038189528"/>
+</session>

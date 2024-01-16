@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>Chemart Chemical trading</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>		   
+		    $( function() {
+			    $( "#slider-range" ).slider({
+			      range: true,
+			      min: 0,
+			      max: 10000,
+			      values: [ 1000, 3000 ],
+			      slide: function( event, ui ) {
+			        $( "#amount" ).val( "Rs." + ui.values[ 0 ] + " - Rs." + ui.values[ 1 ] );
+			      }
+			    });
+			    $( "#amount" ).val( "Rs." + $( "#slider-range" ).slider( "values", 0 ) +
+			      " - Rs." + $( "#slider-range" ).slider( "values", 1 ) );
+			});
+		 </script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">Chemart</p>
+							<p class="small-logo">Chemical trading</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">My Account</a></li>
+								<li><a href="orders.html">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Chemical Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product1/imgp1.jpg"></td>
+										<td>Chemical name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product1/imgp2.jpg"></td>
+										<td>Chemical name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product1/imgp3.jpg"></td>
+										<td>Chemical name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Chemical Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>Chemical name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>Chemical name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+                        <li><a href="caution.html">Caution</a></li>
+
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li> / </li>
+					<li>caution</li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="new-product-section shop">
+				<div class="sidebar">
+					<div class="sidebar-widget">
+						<h3>Category</h3>
+						<ul>
+
+							<li><a href="caution.html">lab chemicals</a></li>
+							<li><a href="shop.html">ruffly uses chemicals </a></li>
+							<!-- <li><a href="">Men's Clothes</a></li>
+							<li><a href="">Men's Shoes</a></li>
+							<li><a href="">Men's Watches</a></li>
+							<li><a href="">Women's Handbags</a></li>
+							<li><a href="">Women's Glasses</a></li> -->
+
+						</ul>
+					</div>
+					<div class="sidebar-widget">
+						<h3>Range Filter</h3>
+						<p>
+						  <label for="amount"></label>
+						  <input type="text" id="amount" readonly style="border:0; color:#F0E68C;  margin-bottom: 5px;">
+						</p>						 
+						<div id="slider-range"></div>
+					</div>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp1.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>aCITIC ACID</h3>
+							<h2>350ml</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.375/-</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp2.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Dechloromethane</h3>
+							<h2>950ml</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.785/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp3.jpg">
+						</a>
+						<div class="product-detail">
+						<h3>Aciton</h3>
+							<h2>2.5l</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.492/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp4.jpg">
+						</a>
+						<div class="product-detail">
+						<h3>formaldihide</h3>
+							<h2>5 l</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.4852/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp5.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Aluminium oxide</h3>
+							<h2>350ml</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.2541/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp6.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>Silver nitrate</h3>
+							<h2>25Mg</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.524/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp7.jpg">
+						</a>
+						<div class="product-detail">
+						<h3>silver</h3>
+							<h2>35ml</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.69-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product1.html">
+							<img src="img/product1/imgp7.jpg">
+						</a>
+						<div class="product-detail">
+							<h3>sodium ACID</h3>
+							<h2>350ml</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.859/-</p>
+						</div>
+					</div>
+				</div>				
+			</div> <!-- New Product Section -->	
+			<div class="load-more">
+				<a href="#">Load More</a>
+			</div>		
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				
+						
+					</div>
+					<div class="widget-content">
+						<div class="footer-bar">
+					<p>------------------------------------------------------------------------------------------------------------------------------------------------</p>
+				</div>
+			
+				</div>
+				
+
+			</div> <!-- Footer Widget -->
+			
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>

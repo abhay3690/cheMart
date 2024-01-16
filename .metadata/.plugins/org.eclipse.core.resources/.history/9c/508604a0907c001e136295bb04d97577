@@ -1,0 +1,57 @@
+packge admin;
+
+
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
+import java.util.UUID;
+
+public class ForgotPasswordService {
+    public void sendPasswordResetEmail(String userEmail) {
+        // Generate a unique token for password reset
+        String resetToken = UUID.randomUUID().toString();
+
+        // Store the reset token in a database or cache along with the user's email
+
+        // Send a password reset email
+        sendEmail(userEmail, resetToken);
+    }
+
+    public void resetPassword(String userEmail, String newPassword, String resetToken) {
+        // Verify that the reset token is valid and corresponds to the provided email
+        // This should involve checking the token against the stored token in the database
+
+        // If the token is valid, update the user's password with the new one
+        // You should also invalidate or delete the reset token after the password is reset
+    }
+
+    private void sendEmail(String to, String resetToken) {
+        final String username = "your-email@gmail.com"; // Your email address
+        final String password = "your-email-password"; // Your email password
+
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com"); // SMTP server (use your email provider's SMTP server)
+        props.put("mail.smtp.port", "587"); // SMTP port (use the appropriate port for your email provider)
+
+        Session session = Session.getInstance(props, new Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(username));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+            message.setSubject("Password Reset");
+            message.setText("To reset your password, click the following link:\n\n"
+                    + "http://example.com/reset-password?token=" + resetToken);
+
+            Transport.send(message);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+    }
+}

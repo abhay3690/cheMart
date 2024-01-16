@@ -1,0 +1,21 @@
+
+Aug 22, 2023 12:33:19.271 NEW SESSION
+Aug 22, 2023 12:33:19.271 [7800:3976:0822/123319.268:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Aug 22, 2023 12:33:40.639 [7800:3976:0822/123340.639:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Aug 22, 2023 12:35:06.777 NEW SESSION
+Aug 22, 2023 12:35:06.778 [2484:10408:0822/123506.774:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Aug 22, 2023 12:35:31.560 [2484:10408:0822/123531.560:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Aug 22, 2023 13:34:48.572 [11924:1760:0822/133448.571:ERROR:gcm_message_cryptographer.cc(376)] Unable to transform the record.
+Aug 22, 2023 13:58:54.478 [11924:1760:0822/135854.477:ERROR:gcm_message_cryptographer.cc(376)] Unable to transform the record.
+
+Nov 07, 2023 17:38:31.520 NEW SESSION
+Nov 07, 2023 17:38:31.521 [2428:5600:1107/173831.518:ERROR:gcm_message_cryptographer.cc(376)] Unable to transform the record.
+Nov 07, 2023 18:05:20.339 [2428:8748:1107/180520.339:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+Nov 08, 2023 14:47:01.637 [2428:8748:1108/144701.637:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Nov 08, 2023 14:47:01.642 [2428:10212:1108/144701.642:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+Nov 08, 2023 14:47:05.924 [2428:5600:1108/144705.923:ERROR:device_event_log_impl.cc(225)] [14:47:05.923] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+
+Nov 09, 2023 07:51:59.651 NEW SESSION
+Nov 09, 2023 07:51:59.652 [13288:11472:1109/075159.650:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Nov 09, 2023 07:52:26.258 [13288:11472:1109/075226.258:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106

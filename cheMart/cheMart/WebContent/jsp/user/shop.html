@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- Javascript -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(function () {
+		$("#slider-range").slider({
+			range: true,
+			min: 0,
+			max: 10000,
+			values: [1000, 3000],
+			slide: function (event, ui) {
+				$("#amount").val("Rs." + ui.values[0] + " - Rs." + ui.values[1]);
+			}
+		});
+		$("#amount").val("Rs." + $("#slider-range").slider("values", 0) +
+			" - Rs." + $("#slider-range").slider("values", 1));
+	});
+</script>
+
+<div class="breadcrumb">
+	<ul>
+		<li><a href="home.jsp">Home</a></li>
+		<li> / </li>
+		<li>Shop</li>
+	</ul>
+</div> <!-- End of Breadcrumb-->
+
+<div class="new-product-section shop">
+	<div class="sidebar">
+		<div class="sidebar-widget">
+			<h3>Category</h3>
+			<ul>
+				<li><a onclick="navLink('')">lab chemicals</a></li>
+				<li><a onclick="navLink('shop')">ruffly uses chemicals </a></li>
+			</ul>
+		</div>
+		<div class="sidebar-widget">
+			<h3>Range Filter</h3>
+			<p>
+				<label for="amount"></label>
+				<input type="text" id="amount" readonly style="border:0; color:#F0E68C;  margin-bottom: 5px;">
+			</p>
+			<div id="slider-range"></div>
+		</div>
+	</div>
+	<div class="product-content">
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img1.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>Rust preventive oil</h3>
+				<h2>Purit RF 406DT</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.1227/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img2.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>home worker product</h3>
+				<h2>PURER RO 322 Alkaline Cleaner Membrane Alkaline Cleaner</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.1225/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img3.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>Rust preventive oil</h3>
+				<h2>Purit DW 40</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.1006/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img4.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>Acitate</h3>
+				<h2>Ethyl Acetate | CAS No.: 141-78-6 | CH3COOC2H5 | Clear liquid | Fruity Odor</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.277/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img5.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>luandry chemicals</h3>
+				<h2>Enzyme 10X - 5kg | 10 kg | 25kg | Enzymatic Laundry Detergent Powder | Application | Powde</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.882/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img6.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>luandry chemicals</h3>
+				<h2>Spot Active Rust Remover| 2 Litre (4 x 500ml)</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.3800/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img7.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>luandry chemicals</h3>
+				<h2>Feelsoft Rose 5 Litre | 10 Litre</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.3500/-</p>
+			</div>
+		</div>
+		<div class="product">
+			<a onclick="navLink('product')">
+				<img src="img/product/img8.jpg">
+			</a>
+			<div class="product-detail">
+				<h3>laundry chemicals </h3>
+				<h2>Enzyme 10X - 5kg | 10 kg | 25kg | Enzymatic Laundry Detergent Powder | Application | Powder</h2>
+				<a href="#">Add to Cart</a>
+				<p>Rs.5200/-</p>
+			</div>
+		</div>
+	</div>
+</div> <!-- New Product Section -->
+<div class="load-more">
+	<a href="#">Load More</a>
+</div>

@@ -1,0 +1,90 @@
+
+
+
+
+package admin;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import utils.DBConnection;
+
+public class Contact {
+	
+	public String getContact() {
+		JSONObject jsonObj = null;
+		JSONArray oJsonArray= new JSONArray();
+		ResultSet oRs = null;
+		Statement oStmt = null;
+		try {
+			Connection con = DBConnection.getConnection();
+			oStmt = con.createStatement();
+			oRs = oStmt.executeQuery("SELECT * FROM product WHERE deleteFlag = 0");
+			while(oRs.next()) {
+				jsonObj = new JSONObject();
+				jsonObj.put("id", oRs.getInt("id")) ;
+				jsonObj.put("firstname",oRs.getString("firstname"));
+				jsonObj.put("lastname",oRs.getDouble("lastname"));
+				jsonObj.put("email",oRs.getString("email"));
+				jsonObj.put("message",oRs.getString("message"));
+				oJsonArray.put(jsonObj);
+			}
+		}catch(Exception ex) {
+			
+			ex.printStackTrace();
+		}
+		return String.valueOf(oJsonArray);
+	}
+	
+	public boolean isProductExists(String strContact) {
+		boolean bFlag = false;
+		ResultSet oRs = null;
+		PreparedStatement oPrStmt = null;
+		try {
+			JSONObject contact = new JSONObject(strContact);
+			Connection con = DBConnection.getConnection();
+			oPrStmt = con.prepareStatement("SELECT id FROM product WHERE deleteFlag = 0 and companyId=? and name=?");
+			oPrStmt.setInt(1,contact.getInt("firstname"));
+			oPrStmt.setString(2, contact.getString("lastname"));
+			oRs = oPrStmt.executeQuery();
+			if(oRs.next()) {
+				bFlag = true;
+			}
+		}catch(Exception ex) {
+			
+			ex.printStackTrace();
+		}
+		return bFlag;
+	}
+	
+	public String addContact(String strContact) {
+		JSONObject returnJson = new JSONObject();
+		PreparedStatement oPrStmt = null;
+		try {
+			boolean bFlag = isProductExists(strContcat);
+			if(!bFlag) {
+				JSONObject contact = new JSONObject(strContact);
+				Connection con = DBConnection.getConnection();
+				oPrStmt = con.prepareStatement("INSERT INTO product(id,firstname,lastname,email,message) values(?,?,?,?,?)");
+				oPrStmt.setString(1, contact.getString("id"));
+				oPrStmt.setDouble(2, contact.getDouble("firstname"));
+				oPrStmt.setInt(3, contact.getInt("lastname"));
+				oPrStmt.setString(4, contact.getString("email"));
+				oPrStmt.setString(5, contact.getString("message"));
+				oPrStmt.executeUpdate();
+				returnJson.put("status","success");
+			}
+			returnJson.put("status","exists");
+		}catch(Exception ex) {
+			returnJson.put("status","failed");
+			ex.printStackTrace();
+		}
+		return returnJson.toString();
+	}
+
+}
